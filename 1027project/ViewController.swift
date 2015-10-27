@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var Btn: UIButton!
+    
+    @IBOutlet weak var CircularBtn: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +25,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+                
+        Btn.layer.borderWidth = 1
+        Btn.layer.borderColor = Btn.tintColor.CGColor
+        
+    }
+    
+    
+    @IBAction func onClick(sender: AnyObject) {
+        print("click")
+    }
+  
+    
+    
 
 
 }
+
 
